@@ -76,7 +76,7 @@ def main():
         print('end Game')
         players_list.append(player_name)
         players_list.append(PLAYER_SCORE)
-        print('=-'*30)
+        print('=-'*20)
         print(f'{"RECORDS":^40}')
         place = 0
         for pos in range(0,len(players_list)):
@@ -85,7 +85,7 @@ def main():
                 print(f'{place}° - {players_list[pos]:.<30}', end='')
             else:
                 print(f' {players_list[pos]} WINS')
-        print('-='*30)
+        print('-='*20)
         repeat = input('Try Again? [Y/N]: ').strip().upper()
         while repeat not in 'yYnN':
             repeat = input('Try Again? [Y/N]: ').strip().upper()
