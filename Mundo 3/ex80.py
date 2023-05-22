@@ -1,13 +1,17 @@
 valores = list()
 for i in range(5):
-    valores.append(int(input('Digite um numero: ')))
-    for p, v in enumerate(valores):
-        if v == max(valores):
-            print('salvo na ultima casa')
-        elif v == min(valores):
-            print('salvo na primeira posição')
-        else:
-            print(f'Valor salvo na casa {p}')
+    n = int(input('Digite um numero: '))
+    if i == 0 or n > valores[len(valores)-1]:
+        valores.append(n)
+        print('Adicionado ao final da lista...')
+    else:
+        pos = 0
+        while pos < len(valores):
+            if n <= valores[pos]:
+                valores.insert(pos, n)
+                print(f'adicionado na posição {pos} da lista')
+                break
+            pos += 1
 
 #valores.sort()
 print(f'Os valores digitados em ordem foram: {valores}')
