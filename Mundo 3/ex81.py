@@ -4,3 +4,4 @@ while True
     r = 'y'
     if r not in 'nN':
         r = input('Quer continuar? [S/N]').strip().upper()
+
