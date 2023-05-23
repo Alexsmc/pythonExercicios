@@ -84,7 +84,7 @@ def main():
         print('=-'*30)
         print(f'{"RECORDS":^40}')
         for p in player_list:
-            print(f'{p[1]} ---------------------- {p[0]:<30}')
+            print(f'{p[1]:.<1}', '-'*20, f'{p[0]:>1}')
         print('-='*30)
         repeat = input('Try Again? [Y/N]: ').strip().upper()
         while repeat not in 'yYnN':
