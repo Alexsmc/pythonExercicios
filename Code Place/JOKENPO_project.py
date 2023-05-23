@@ -10,7 +10,8 @@ ELEMENTS = ("PAPER", "SCISSORS", "ROCK", "LIZARD", "SPOCK")
 def main():
     # canvas = Canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
     # TODO: your code here!
-    players_list = []
+    player_list = []
+    players = [0, 'Nome']
     repeat = 'Y'
     while repeat in 'yY':
         player_name = str(input("What's your name?: ")).strip().capitalize()
@@ -74,18 +75,17 @@ def main():
             print('=' * 30)
         print(f'{player_name} finished with: {PLAYER_SCORE} wins')
         print('end Game')
-        players_list.append(player_name)
-        players_list.append(PLAYER_SCORE)
-        print('=-'*20)
+        players[1] = player_name
+        players[0] = PLAYER_SCORE
+        player_list.append(players[:])
+        player_list.sort(reverse=True)
+        if len(player_list) > 10:
+            player_list.pop()
+        print('=-'*30)
         print(f'{"RECORDS":^40}')
-        place = 0
-        for pos in range(0,len(players_list)):
-            if pos%2==0:
-                place +=1
-                print(f'{place}° - {players_list[pos]:.<30}', end='')
-            else:
-                print(f' {players_list[pos]} WINS')
-        print('-='*20)
+        for p in player_list:
+            print(f'{p[1]} ---------------------- {p[0]:<30}')
+        print('-='*30)
         repeat = input('Try Again? [Y/N]: ').strip().upper()
         while repeat not in 'yYnN':
             repeat = input('Try Again? [Y/N]: ').strip().upper()
