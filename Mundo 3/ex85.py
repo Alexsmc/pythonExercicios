@@ -1,7 +1,7 @@
 numeros = [[],[]]
 valor = 0
-for i in range(7):
-    valor = int(input(f'Digite o {i+1}º valor: '))
+for i in range(1,8):
+    valor = int(input(f'Digite o {i}º valor: '))
     if valor %2 == 0:
         numeros[0].append(valor)
     else:
