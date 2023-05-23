@@ -5,5 +5,5 @@ for l in range(0,3):
 print('Eis sua Matriz: ')
 for l in range(0,3):
     for c in range(0,3):
-        print(f'[{matriz[l][c]}]', end='')
+        print(f'[{matriz[l][c]:^5}]', end='')
     print()
