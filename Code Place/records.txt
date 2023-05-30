@@ -1,1 +1,1 @@
-[[4, "Silio"], [4, "Goku"], [2, "Tomas"], [2, "Mia"], [1, "Tonny"], [1, "Nick"], [0, "Juca"], [0, "Bulma"]]
+[[4, "Silio"], [4, "Goku"], [2, "Tomas"], [2, "Mia"], [2, "Apolo"], [1, "Tonny"], [1, "Nick"], [1, "Alex"], [0, "Picolo"], [0, "Juca"]]
