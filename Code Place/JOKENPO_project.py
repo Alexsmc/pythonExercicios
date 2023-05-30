@@ -22,16 +22,21 @@ def main():
         while True:
             print(f'{player_name} has {PLAYER_SCORE} wins')
             cpu = randint(0, 4)
-            print('''CHOSE YOUR WEPON
+            print('''CHOOSE YOUR WEAPON
             [0] PAPER
             [1] SCISSORS
             [2] ROCK
             [3] LIZARD
             [4] SPOCK''')
-            p1 = int(input('Choice: '))
-            while (p1 < 0) or (p1 > 4):
-                print('Try again!!')
-                p1 = int(input('Choice: '))
+            while True:
+                try:
+                    p1 = int(input('Choice: '))
+                    if not 0 <= p1 <= 4:
+                        raise ValueError("Out of the range")
+                except ValueError as e:
+                    print("Invalid Value:", e)
+                else:
+                    break
             print('GET READY...')
             sleep(0.8)
             print('GO!!')
@@ -77,7 +82,7 @@ def main():
                         PLAYER_SCORE += 1
             print('=' * 30)
         print(f'{player_name} finished with: {PLAYER_SCORE} wins')
-        print('end Game')
+        print('GAME OVER')
         players[1] = player_name
         players[0] = PLAYER_SCORE
         player_list.append(players[:])
