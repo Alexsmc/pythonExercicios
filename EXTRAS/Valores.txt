@@ -1,0 +1,1 @@
+[[9, "mirian"], [9, "caxias"], [9, "Maria"], [8, "manu"], [7, "milena"], [6, "silvia"], [5, "José"], [3, "juca"], [2, "leco"], [2, "jussara"]]

@@ -1,4 +1,5 @@
 #from graphics import Canvas
+import json
 from random import randint
 from time import sleep
 
@@ -9,10 +10,12 @@ ELEMENTS = ("PAPER", "SCISSORS", "ROCK", "LIZARD", "SPOCK")
 
 def main():
     # canvas = Canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
-    # TODO: your code here!
     player_list = []
     players = [0, 'Nome']
     repeat = 'Y'
+    with open('records.txt', 'r', encoding="utf-8") as file:
+        player_list = json.load(file)
+
     while repeat in 'yY':
         player_name = str(input("What's your name?: ")).strip().capitalize()
         PLAYER_SCORE = 0
@@ -81,6 +84,8 @@ def main():
         player_list.sort(reverse=True)
         if len(player_list) > 10:
             player_list.pop()
+        with open('records.txt', 'w') as file:
+            json.dump(player_list, file)
         print('=-'*30)
         print(f'{"RECORDS":^40}')
         for p in player_list:
