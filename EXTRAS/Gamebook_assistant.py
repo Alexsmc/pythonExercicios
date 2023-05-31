@@ -16,6 +16,7 @@ while True:
     opc = int(input("O que deseja? "))
     if opc == 1:
         print('Construindo um novo personagem: ')
+        dados['Posição: '] = 1
         dados['Nome: '] = str(input('Nome: '))
         dados['Habilidade inicial: '] = randint(1, 6) + 6
         dados['Energia inicial: '] = randint(2, 12) + 12
