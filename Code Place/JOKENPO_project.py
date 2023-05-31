@@ -10,7 +10,7 @@ ELEMENTS = ("PAPER", "SCISSORS", "ROCK", "LIZARD", "SPOCK")
 
 def main():
     # canvas = Canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
-    player_list = []
+    #player_list = []
     players = [0, 'Nome']
     repeat = 'Y'
     with open('records.txt', 'r', encoding="utf-8") as file:
