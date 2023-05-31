@@ -17,9 +17,9 @@ while True:
     if opc == 1:
         print('Construindo um novo personagem: ')
         dados['Nome: '] = str(input('Nome: '))
-        dados['Habilidade inicial: '] = randint(1,6) + 6
-        dados['Energia inicial: '] = randint(2,12) + 12
-        dados['Sorte inicial: '] = randint(1,6) + 6
+        dados['Habilidade inicial: '] = randint(1, 6) + 6
+        dados['Energia inicial: '] = randint(2, 12) + 12
+        dados['Sorte inicial: '] = randint(1, 6) + 6
         dados['Ouro: '] = 10
         dados['Joias: '] = 0
         print('Escolha uma poção:')
@@ -33,7 +33,7 @@ while True:
             dados['Poção: '] = 'Poção de ENERGIA'
         elif poc == 3:
             dados['Poção: '] = 'Poção da FORTUNA'
-        dados['Itens: '] = ['Espada','Armadura de Couro']
+        dados['Itens: '] = ['Espada', 'Armadura de Couro']
         dados['Provisões: '] = 10
         jogador.append(dados.copy())
         with open('Gamebook_file.txt', 'w', encoding='utf-8') as arquivo:
@@ -47,7 +47,8 @@ while True:
         for e in jogador:
             for k, v in e.items():
                 print(f'{k}{v}')
-    elif opc ==3:
+    elif opc == 3:
+        break
     elif opc == 7:
         print('Até a proxima')
         with open('Gamebook_file.txt', 'w', encoding='utf-8') as arquivo:
