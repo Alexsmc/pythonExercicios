@@ -51,6 +51,7 @@ while True:
     elif opc == 3:
         break
     elif opc == 7:
+        print(jogador['Posição: '])
         print('Até a proxima')
         with open('Gamebook_file.txt', 'w', encoding='utf-8') as arquivo:
             json.dump(jogador, arquivo)
