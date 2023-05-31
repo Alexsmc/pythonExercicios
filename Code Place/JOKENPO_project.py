@@ -3,8 +3,8 @@ import json
 from random import randint
 from time import sleep
 
-CANVAS_WIDTH = 400
-CANVAS_HEIGHT = 400
+#CANVAS_WIDTH = 400
+#CANVAS_HEIGHT = 400
 ELEMENTS = ("PAPER", "SCISSORS", "ROCK", "LIZARD", "SPOCK")
 
 
