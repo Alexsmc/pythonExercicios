@@ -17,8 +17,8 @@ def salvar_dados(dados):
 # Função para exibir o menu de contas e retornar a conta selecionada
 def exibir_menu_contas(contas):
     print("Selecione uma conta:")
-    for i, conta in enumerate(contas):
-        print(f"{i+1}. {conta}")
+    for i, (conta, saldo) in enumerate(contas.items()):
+        print(f"{i+1}. {conta} ({saldo:.2f})")
     while True:
         try:
             opcao = int(input("Digite o número da conta desejada: "))
@@ -63,26 +63,35 @@ def fazer_deposito_conta(contas):
 # Função para fazer um saque em uma conta específica
 def fazer_saque_conta(contas):
     nome_conta = exibir_menu_contas(contas)
+    saldo = contas[nome_conta]
+
     while True:
         try:
             valor = float(input("Digite o valor a ser sacado da conta " + nome_conta + ": "))
-            break
+            if valor > saldo:
+                print("Saldo insuficiente na conta. Digite um valor igual ou menor que o saldo disponível.")
+            else:
+                motivo = input("Digite o motivo do saque: ")
+                break
         except ValueError:
             print("Valor inválido. Digite um número válido.")
 
-    saldo = contas[nome_conta]
-    if valor > saldo:
-        print("Saldo insuficiente na conta", nome_conta + ". Não é possível realizar o saque.")
-    else:
-        saldo -= valor
-        contas[nome_conta] = saldo
-        registrar_movimentacao(f"Saque de {valor} na conta {nome_conta}")
-        print("Saque realizado com sucesso!")
+    saldo -= valor
+    contas[nome_conta] = saldo
+
+    registrar_movimentacao(f"Saque de {valor} da conta {nome_conta}. Motivo: {motivo}")
+
+    print("Saque realizado com sucesso!")
 
 # Função para fazer uma transferência entre contas
 def fazer_transferencia(contas):
     origem = exibir_menu_contas(contas)
     destino = exibir_menu_contas(contas)
+
+    if origem == destino:
+        print("As contas de origem e destino são iguais. Transferência não realizada.")
+        return
+
     while True:
         try:
             valor = float(input("Digite o valor a ser transferido da conta " + origem + " para a conta " + destino + ": "))
@@ -151,7 +160,9 @@ def exibir_submenu_contas(contas):
         print("2. Fazer um saque de uma conta")
         print("3. Fazer uma transferência entre contas")
         print("4. Editar nome de uma conta")
-        print("5. Voltar ao menu principal")
+        print("5. Adicionar uma nova conta")
+        print("6. Excluir uma conta")
+        print("7. Voltar ao menu principal")
 
         opcao = input("Digite o número correspondente à opção desejada: ")
 
@@ -164,11 +175,15 @@ def exibir_submenu_contas(contas):
         elif opcao == "4":
             editar_nome_conta(contas)
         elif opcao == "5":
-            break
+            adicionar_conta(contas)
+        elif opcao == "6":
+            excluir_conta(contas)
+        elif opcao == "7":
+            return
         else:
             print("Opção inválida.")
 
-# Função para exibir o menu principal e realizar as operações
+# Função para exibir o menu principal
 def exibir_menu_principal():
     dados = carregar_dados()
     contas = dados.get("contas", {})

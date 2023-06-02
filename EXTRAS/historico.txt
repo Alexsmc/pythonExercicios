@@ -1,3 +1,6 @@
 Depósito de 10.0 na conta Nu Bank
 Depósito de 0.0 na conta Nu Bank
 Saque de 10.0 na conta Nu Bank
+Transferência de 4.0 da conta Nu Bank para a conta Poupança
+Transferência de 4.0 da conta Poupança para a conta Nu Bank
+Saque de 10.0 da conta Nu Bank. Motivo: Passagem
