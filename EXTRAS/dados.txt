@@ -1,0 +1,3 @@
+NU Bank:345.24
+Itau:0.0
+Inter:0.0
