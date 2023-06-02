@@ -56,3 +56,5 @@ while True:
         with open('Gamebook_file.txt', 'w', encoding='utf-8') as arquivo:
             json.dump(jogador, arquivo)
         break
+def batalha():
+    
