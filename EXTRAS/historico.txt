@@ -4,3 +4,7 @@ Saque de 10.0 na conta Nu Bank
 Transferência de 4.0 da conta Nu Bank para a conta Poupança
 Transferência de 4.0 da conta Poupança para a conta Nu Bank
 Saque de 10.0 da conta Nu Bank. Motivo: Passagem
+Depósito de -10.0 na conta Nu Bank
+Saque de 50.0 da conta Nu Bank. Motivo: Frutas
+Depósito de 350.0 na conta Carteira
+Transferência de 200.0 da conta Carteira para a conta Itaú
