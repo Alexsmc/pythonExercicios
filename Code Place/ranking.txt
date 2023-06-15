@@ -1,1 +1,0 @@
-[[5, "Vitoria"], [5, "Eneas"], [4, "Silvio"], [4, "Goku"], [4, "Giga"], [3, "Jake"], [2, "Vitoria"], [2, "Tomas"], [2, "Mia"], [2, "Lucas"]]
