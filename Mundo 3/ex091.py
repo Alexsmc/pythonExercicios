@@ -1,21 +1,21 @@
 from random import randint
 from time import sleep
-jogador = {}
-jogo = []
-
-for c in range(4):
-    jogador['O jogador'] = c+1
-    jogador['tirou'] = randint(1,6)
-    jogo.append(jogador.copy())
+from operator import itemgetter
+jogo = {'jogador 1': randint(1, 6),
+        'jogador 2': randint(1, 6),
+        'jogador 3': randint(1, 6),
+        'jogador 4': randint(1, 6)}
+ranking = []
 
 print('Valores Sorteados: ')
-for e in jogo:
-    for k,v in e.items():
-        print(f'{k} {v}', end=' ')
-    print()
-
-
-
+for k, v in jogo.items():
+    print(f'{k} tirou {v} no dado.')
+    sleep(0.8)
+ranking = sorted(jogo.items(), key=itemgetter(1), reverse=True)
+print('-='*30)
+print('  == RANKING DOS JOGADORES ==')
+for i, v in enumerate(ranking):
+    print(f'   {i+1}º Lugar {v[0]} com {v[1]}.')
 
 '''
 estado = dict()
