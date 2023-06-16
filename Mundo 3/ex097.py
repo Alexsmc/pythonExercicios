@@ -4,9 +4,10 @@ def linha(qnt):
 
 def escreva(msg):
     linha(len(msg)+2)
-    print(f'{msg:^}')
+    print(f' {msg}')
     linha(len(msg)+2)
 
 
 # Main
-escreva(input('Qual o título do programa? '))
+while True:
+    escreva(input('Qual o título do programa? '))
