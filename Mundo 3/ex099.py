@@ -1,6 +1,10 @@
 from time import sleep
+
+
 def linha():
     print('-='*40)
+
+
 def maior(* num):
     linha()
     print('Analisando os valores passados...')
@@ -9,7 +13,6 @@ def maior(* num):
         sleep(0.5)
     print(f'Foram adicionados {len(num)} valores ao todo.')
     print(f'O maior número informado é: {max(num)}')
-
 
 
 # Main
