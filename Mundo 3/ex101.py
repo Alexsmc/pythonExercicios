@@ -1,12 +1,10 @@
-import datetime
-
-
 def calc_idade(ano_nasc):
     """
     Função que calcula a idade atual do individuo
     :param ano_nasc: recebe o ano que o usuário nasceu
     :return: retorna a idade atual do usuário
     """
+    import datetime
     idade = datetime.date.today().year - ano_nasc
     return idade
 
