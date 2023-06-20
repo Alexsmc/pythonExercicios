@@ -10,8 +10,10 @@ def fatorial(n, show=False):
         f *= c
     if show:
         for c in range(n, 0, -1):
-            print(f'{c}', end=" X ")
-        print(f' = {f}')
+            if c > 1:
+                print(f'{c}', end=" X ")
+            else:
+                print(f'{c} = {f}')
     else:
         print(f'O valor fatorial é: {f}')
 
