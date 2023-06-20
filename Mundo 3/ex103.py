@@ -1,3 +1,6 @@
+import nt
+
+
 def ficha(nome='<desconhecido>', gol=0):
     """
     -> Função mostra o nome e o numero de gols do jogador cadastrado.
@@ -10,5 +13,12 @@ def ficha(nome='<desconhecido>', gol=0):
 
 # Main
 nome = str(input('Nome do Jogador: '))
-gol = int(input('número de gols: '))
-ficha(nome, gol)
+gol = str(input('número de gols: '))
+if gol.isnumeric():
+    gol = int(gol)
+else:
+    gol = 0
+if nome.strip() == '':
+    ficha(gol=gol)
+else:
+    ficha(nome, gol)
