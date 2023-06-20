@@ -19,4 +19,4 @@ def fatorial(n, show=False):
 
 
 # Main
-fatorial(int(input('Qual número deseja ver o fatorial? ')),True)
+fatorial(int(input('Qual número deseja ver o fatorial? ')), True)
