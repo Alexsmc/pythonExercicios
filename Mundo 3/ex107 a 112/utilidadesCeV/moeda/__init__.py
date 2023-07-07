@@ -26,8 +26,8 @@ def metade(n, forma=True):
     else:
         return valor
 
-def valorMoeda(n):
-    valor_formatado = f'R${n:.2f}'
+def valorMoeda(n = 0, moeda = 'R$'):
+    valor_formatado = f'{moeda}{n:.2f}'.replace('.',',')
     return valor_formatado
 
 def título(msg):
@@ -41,6 +41,6 @@ def resumo(p, aumento, reducao):
     print(f'Valor Analisado: {valorMoeda(p)}')
     print(f'Dobro do preço: {dobro(p)}')
     print(f'Metade do preço: {metade(p)}')
-    print(f'80% de aumento: {aumentar(p, aumento, True)}')
-    print(f'35% de redução: {dimunir(p, reducao, True)}')
+    print(f'{aumento}% de aumento: {aumentar(p, aumento, True)}')
+    print(f'{reducao}% de redução: {dimunir(p, reducao, True)}')
     print('-'* 25)
