@@ -1,4 +1,4 @@
 from utilidadesCeV import moeda, dado
 
-p = dado.leiaInt('Digite o preço: R$ ')
-moeda.resumo(p, 80, 35)
+p = dado.leiaFloat('Digite o preço: R$ ')
+moeda.resumo(p, 10, 15)
