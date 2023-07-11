@@ -29,11 +29,11 @@ def leiafloat(msg):
             else:
                 valor = float(entrada)
                 ok = False
-    except TypeError:
+    except TypeError or ValueError:
         print('Usuário não digitou um valor válido.')
     except KeyboardInterrupt:
         print('Usuário praferiu não informar o dado.')
     except Exception as erro:
-        print(f'Programa não funcionou devido ao seguinte erro: {erro.__cause__}')
+        print(f'Programa não funcionou devido ao seguinte erro: {erro.__class__}')
     else:
         return valor
