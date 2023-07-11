@@ -55,7 +55,7 @@ def leiaInt2(msg):
             return n
 
 
-def leaiafloat2(msg):
+def leaiaFloat2(msg):
     while True:
         try:
             n = float(input(msg))
