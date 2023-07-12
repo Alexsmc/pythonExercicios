@@ -1,5 +1,3 @@
-
-
 def arquivoExiste(nome):
     try:
         a = open(nome, 'rt')
@@ -15,7 +13,7 @@ def criarArquivo(nome):
         a = open(nome, 'wt+')
         a.close()
     except:
-       print('Houve um ERRO na criação do arquivo!')
+        print('Houve um ERRO na criação do arquivo!')
     else:
         print(f'Arquivo {nome} criado com sucesso!')
 
@@ -26,5 +24,4 @@ def lerArquivo(nome):
     except:
         print('Erro ao ler o arquivo')
     else:
-        cabeçalho('Pessoas Cadastradas')
-        print(a.readlines())
+        print(a.read())

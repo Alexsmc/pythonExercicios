@@ -1,0 +1,4 @@
+Alex; 10
+Apolo; 20
+Luiz; 30
+Susan; 40

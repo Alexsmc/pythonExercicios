@@ -9,11 +9,11 @@ else:
     arquivo.criarArquivo(arq)
 
 while True:
-    resposta = interface.menu(['Ver pessoa cadastrada', 'Cadastrar nova pessoa', 'Cadastrar nova pessoa'])
+    resposta = interface.menu(['Ver pessoa cadastrada', 'Cadastrar nova pessoa', 'Sair'])
     if resposta == 1:
         # Opção de listar o conteúdo de um arquivo!
+        interface.cabeçalho('Pessoas cadastradas')
         arquivo.lerArquivo(arq)
-        interface.cabeçalho('Ver pessoa cadastrada')
     elif resposta == 2:
         interface.cabeçalho('Cadastrar nova pessoa')
     elif resposta == 3:
