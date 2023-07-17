@@ -1,4 +1,2 @@
-Alex; 10
-Apolo; 20
-Luiz; 30
-Susan; 40
+Dias; 12
+Alex; 34

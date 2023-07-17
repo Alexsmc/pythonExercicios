@@ -15,7 +15,10 @@ while True:
         interface.cabeçalho('Pessoas cadastradas')
         arquivo.lerArquivo(arq)
     elif resposta == 2:
-        interface.cabeçalho('Cadastrar nova pessoa')
+        interface.cabeçalho('NOVO CADASTRO')
+        nome = str(input('Nome: '))
+        idade = interface.leiaInt('Idade: ')
+        arquivo.cadastrar(arq, nome, idade)
     elif resposta == 3:
         interface.cabeçalho('Até logo!')
         break
